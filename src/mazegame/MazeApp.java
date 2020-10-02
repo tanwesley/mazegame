@@ -28,14 +28,15 @@ public class MazeApp {
 				+ "and restore our God-ordained Constitutional right \nto go to Target unmuzzled from these mind-control masks.");
 		System.out.println("\nYou will be given a supply of hydroxychloroquine (HCQ), should you fall \nill in your mission. This will be your lifeline against"
 				+ " whatever \nhorrors lie inside. Once your HCQ falls to zero, you'll be naked to whatever \nattacks they throw at you. We have no map of the facility, "
-				+ "so I'm afraid you're \ngoing in blind, Patriot. The Day of Reckoning draws nearer... "
+				+ "so I'm afraid you're \ngoing in blind, Patriot. \nAvoid any rooms containing 5G emitters, remember them if you run into any."
+				+ "\nFind the main source of the 5G signals and destroy it. \nThe Day of Reckoning draws nearer... "
 				+ "We are counting on you...");
 		System.out.println("\nGood luck, godspeed, and remember....");
 		System.out.println("W H E R E    W E    G O    O N E, \n      W E    G O    A L L \n\n - Q signing off...\n\n"); 
 		
 		
 		do {
-			Building bldg = BuildingBuilder.buildFromFile("my_home.txt");
+			Building bldg = BuildingBuilder.buildFromFile("cdc_hq.txt");
 			GameManager gm = new GameManager(bldg);
 			gm.play(bldg);	
 			System.out.println("Enter y to keep playing. Hit enter to quit.");

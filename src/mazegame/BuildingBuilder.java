@@ -46,7 +46,7 @@ public class BuildingBuilder {
 				bldg.setNeighborsByName(room,norths.get(roomNum),souths.get(roomNum),easts.get(roomNum),wests.get(roomNum));
 				roomNum++;
 			}
-			allRooms.get(rand.nextInt(allRooms.size())+1).setRoomAsGoal(); // sets random room as the goal room
+			allRooms.get(rand.nextInt(allRooms.size()-1)+1).setRoomAsGoal(); // sets random room as the goal room
 			fsc.close();
 			return bldg;
 		} catch (Exception ex) {

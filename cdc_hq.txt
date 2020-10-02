@@ -1,0 +1,32 @@
+Entrance	Welcome to the CDC	null	null	null	Hallway 2	0
+Hallway 1	You walk down a dark hallway...	null	Hallway 2	Vaccine Research	null	10
+Hallway 2	You walk down a dark hallway...	Hallway 1	Hallway 3	Entrance	Bioweapon Research	0
+Hallway 3	You walk down a dark hallway...	Hallway 2	Hallway 4	null	null	0
+Hallway 4	You walk down a dark hallway...	Hallway 3	Prison Block 1	Hallway 5	null	0
+Hallway 5	You walk down a dark hallway...	null	null	Hallway 6	Hallway 4	0
+Hallway 6	You walk down a dark hallway...	null	Hallway 7	Medical Supplyroom	Hallway 5	0
+Hallway 7	You walk down a dark hallway...	Hallway 6	Hallway 8	null	null	0
+Hallway 8	You walk down a dark hallway...	Hallway 7	Hallway 9	null	Trap 3	0
+Hallway 9	You walk down a dark hallway...	Hallway 8	Experiment Chamber	Foreboding Room	Hallway 0	0
+Hallway 10	You walk down a dark hallway...	Trap 3	null	Hallway 9	Hallway 11	0
+Hallway 11	You walk down a dark hallway...	null	Trap 6	Hallway 10	Prison Block 2	0
+Trap 1	You feel your body tingling...	null	null	Secret Tunnel	null	-10
+Trap 2	You feel your body tingling...	Secret Tunnel	null	null	null	-10
+Trap 3	You feel your body tingling...	null	Hallway 10	Hallway 8	null	-10
+Trap 4	You feel your body tingling...	null	null	Prison Block 2	null	-10
+Trap 5	You feel your body tingling...	Prison Block 2	null	Trap 6	null	-10
+Trap 6	You feel your body tingling...	Hallway 11	null	null	Trap 5	-10
+Trap 8	You feel your body tingling...	Medical Supplyroom 2	Foreboding Room	null	null	-10
+Mask Manufacturing	*NO MASK DETECTED* Out of nowhere, a mask shoots onto your face as if it was alive, cutting off your oxygen. You tear it off but not without taking damage...	null	Bioweapon Research	null	null	-10
+Vaccine Research	You enter a room filled with screens on every wall, showing what appear to be blueprints for microchips. Looks like you were right about those vaxxers all along Patriot...	null	null	null	Hallway 1	+10
+Bioweapon Research	You walk into a room with mutant bat specimens suspended in large vats.	Mask Manufacturing	null	Hallway 2	null	0
+Secret Room	The secret tunnel closes behind you and locks... The only exit appears to be a secret door on the East side...	null	null	Hallway 3	null	20
+Secret Tunnel	You crawl through a vent and find a dark tunnel branching off in all directions. You feel uneasy about where these paths may lead... Choose carefully...	Secret Room	Trap 2	Prison Block 2	Trap 1	0
+Prison Block 1	You see rows-upon-rows of prison cells, you can see your patriot brethren call for help from behind the soundproof glass but now is not the time...	Hallway 4	null	null	Secret Tunnel	0
+Prison Block 2	You find a room filled with prison cells. The prisoners stare at you silently from within their soundproof cells	null	Trap 5	Hallway 11	Trap 4	0
+Medical Supplyroom	This is where they keep medical supplies. Surely there is some HCQ in here.	null	null	null	Hallway 6	10
+Medical Supplyroom 2	You find a large cache of HCQ	null	Trap 8	null	null	40
+Experiment Chamber	Large tanks with human bodies suspended in liquid surround you.	Hallway 9	null	Trap 7	null	0
+Foreboding Room	You enter a dark room with doors on all 4 sides. You feel a sense that you should go back where you came from but a part of you has a feeling the risk may pay off...	Trap 8	Trap 7	Sacrificial Chamber	Hallway 9	0
+Sacrificial Chamber	The smell of rotting corpses and blood fill your nose. To your horror, you see a towering statue of a demonic Hillary Clinton in the center of the chamber. Hillary opens her mouth and sends a jolt of 5G through you.	null	null	null	Foreboding Room	-20
+

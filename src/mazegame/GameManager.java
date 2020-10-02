@@ -30,7 +30,9 @@ public class GameManager {
 	}
 	
 	public void success() {
-		System.out.println("CONGRATULATIONS PATRIOT. YOU WIN!");
+		System.out.println("YOU FIND A BIG METAL BOX LABELLED 'COVID-19 TRANSMITTER' AND SMASH IT.");
+		System.out.println("'*Transmission from Q* \n'Tremendous job Patriot. You have saved America");
+		System.out.println("from the Deep State. Now President Trump can carry on with his mission to defeat Soros...'");
 	}
 	
 	/**
@@ -58,7 +60,7 @@ public class GameManager {
 						System.out.println("You found +" + Integer.toString(position.getRoomHcq()) + "HCQ!");
 						position.setRoomHcq(0); // gets rid of HCQ after player uses it
 					} else {
-						System.out.println("There's a 5G emitter in here! You lost " 
+						System.out.println("Get out of there! There's a 5G emitter in here! You lost " 
 								+ Integer.toString(position.getRoomHcq()) + "HCQ!");
 					}
 				}
