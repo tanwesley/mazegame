@@ -48,10 +48,10 @@ public class Building {
 	 * @param newRoomName - the new room name
 	 * @param desc - the new room description
 	 */
-	public void addRoom(String startFrom, String dir, String newRoomName, String desc) {
+	public void addRoom(String startFrom, String dir, String newRoomName, String desc, Integer roomHcq) {
 		Room startRoom = findRoomByName(startFrom);
 		if (startRoom != null) {
-			startRoom.setNeighbor(dir, new Room(newRoomName,desc));
+			startRoom.setNeighbor(dir, new Room(newRoomName,desc,roomHcq));
 		}
 	}
 	/**
@@ -64,7 +64,7 @@ public class Building {
 		room.setNeighbor(dir, findRoomByName(name));
 	}
 	/**
-	 * fully connects the room to roms in other directions
+	 * fully connects the room to rooms in other directions
 	 * @param room - the room we'll trying to connect neighbors to
 	 * @param north - name of room to set on north
 	 * @param south

@@ -1,6 +1,7 @@
 package mazegame;
 
 import java.io.File;
+import java.util.Random;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class BuildingBuilder {
 		return buildFromFile(f);
 	}
 	public static Building buildFromFile(File f) {
+		Random rand = new Random();
 		try {
 			Scanner fsc = new Scanner(f);
 			String line;
@@ -19,6 +21,7 @@ public class BuildingBuilder {
 			ArrayList<String> souths = new ArrayList<String>();
 			ArrayList<String> easts = new ArrayList<String>();
 			ArrayList<String> wests = new ArrayList<String>();
+			ArrayList<Integer> roomHcqs = new ArrayList<Integer>(); // Room attributes (gain or lose health)
 			String[] parts;
 			Room rm;
 			Building bldg = new Building();
@@ -28,12 +31,13 @@ public class BuildingBuilder {
 					parts = line.split("\t");
 					names.add(parts[0]);
 					descs.add(parts[1]);
-					rm = new Room(parts[0],parts[1]);
+					rm = new Room(parts[0],parts[1],Integer.parseInt(parts[6]));
 					bldg.addRoom(rm);
 					norths.add(parts[2]);
 					souths.add(parts[3]);
 					easts.add(parts[4]);
 					wests.add(parts[5]);
+					roomHcqs.add(Integer.parseInt((parts[6])));
 				}
 			}
 			int roomNum = 0;
@@ -42,6 +46,7 @@ public class BuildingBuilder {
 				bldg.setNeighborsByName(room,norths.get(roomNum),souths.get(roomNum),easts.get(roomNum),wests.get(roomNum));
 				roomNum++;
 			}
+			allRooms.get(rand.nextInt(allRooms.size())+1).setRoomAsGoal(); // sets random room as the goal room
 			fsc.close();
 			return bldg;
 		} catch (Exception ex) {

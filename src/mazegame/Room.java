@@ -3,9 +3,18 @@ package mazegame;
 import java.util.LinkedHashMap;
 
 public class Room {
+	private boolean isGoal = false; // controls which room is the goal
 	private String name;
 	private String description;
+	private int roomHcq;
 	private LinkedHashMap<String, Room> neighbors;
+	
+	public boolean getGoalStatus() {
+		return isGoal;
+	}
+	public void setRoomAsGoal() {
+		isGoal = true;
+	}
 	public String getName() {
 		return name;
 	}
@@ -17,6 +26,15 @@ public class Room {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public int getRoomHcq() {
+		return roomHcq;
+	}
+	public void setRoomHcq() {
+		this.roomHcq = roomHcq;
+	}
+	public void setRoomHcq(int n) { // method to set hcq with inputted values
+		roomHcq = n;
 	}
 	public LinkedHashMap<String,Room> getNeighbors() {
 		return neighbors;
@@ -40,15 +58,17 @@ public class Room {
 	public boolean matchByName(String otherName) {
 		return name.equalsIgnoreCase(otherName);
 	}
+	
 	public Room() {
 		name = "";
 		description = "";
 		neighbors = new LinkedHashMap<String,Room>();
 	}
-	public Room(String name, String desc) {
+	public Room(String name, String desc, Integer roomHcq) {
 		this();
 		this.name = name;
 		this.description = desc;
+		this.roomHcq = roomHcq;
 	}
 	public String getNeighborName(String dir) {
 		dir = dir.toUpperCase().trim();
